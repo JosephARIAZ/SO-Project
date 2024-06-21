@@ -1,0 +1,42 @@
+---
+// Componente para mostrar una hora y fecha ficticia
+const time = "12:34 PM";
+const date = "Mon, Jan 1, 2024";
+---
+<div class="date-time" data-time={time} data-date={date}>
+{time}
+</div>
+
+<style>
+.date-time {
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.date-time::after {
+    content: attr(data-date);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-time:hover::after {
+    display: flex;
+}
+
+.date-time:hover {
+    visibility: hidden;
+}
+
+.date-time:hover::after {
+    visibility: visible;
+}
+</style>
