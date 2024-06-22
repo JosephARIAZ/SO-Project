@@ -1,5 +1,5 @@
 ---
-// Layout base para la página
+// Layout base para la página nananana
 import Taskbar from '../components/Taskbar.astro';
 ---
 <html lang="en">
@@ -13,11 +13,11 @@ import Taskbar from '../components/Taskbar.astro';
         font-family: Arial, sans-serif;
         background: url(https://images7.alphacoders.com/134/thumb-1920-1346558.png) no-repeat center center fixed;
         background-size: cover;
-        height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
       }
+
       .desktop {
         display: flex;
         flex-direction: column;
@@ -31,5 +31,6 @@ import Taskbar from '../components/Taskbar.astro';
       <slot />
     </div>
     <Taskbar />
+    <script src="/scripts/main.js"is:inline></script>
   </body>
 </html>

@@ -1,0 +1,58 @@
+---
+// Componente para el menú de inicio
+---
+<div id="startMenu" class="start-menu">
+    <div class="menu-content">
+      <h3>Start Menu</h3>
+     
+    </div>
+  </div>
+  
+  <style>
+    .start-menu {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #890c0c56;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      border-radius: 8px;
+      z-index: 1000;
+      display: none;
+      width: 500px;
+      height: 500px;
+    }
+  
+    .start-menu.visible {
+      display: block;
+    }
+  
+    .menu-content {
+      text-align: center;
+    }
+  
+    .menu-content h3 {
+      margin: 0 0 20px;
+    }
+  
+    .menu-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    .menu-content ul li {
+      margin: 10px 0;
+    }
+  
+    .menu-content ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+  
+    .menu-content ul li a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  
