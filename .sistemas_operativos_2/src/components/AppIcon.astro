@@ -1,5 +1,4 @@
 ---
-// Componente para los iconos de las aplicaciones en el escritorio
 const { src, alt, title, url } = Astro.props;
 ---
 <div class="app-icon">
@@ -8,7 +7,6 @@ const { src, alt, title, url } = Astro.props;
   </a>
   <p>{title}</p>
 </div>
-
 <style>
   .app-icon {
     display: flex;
@@ -17,12 +15,10 @@ const { src, alt, title, url } = Astro.props;
     margin: 20px;
     cursor: pointer;
   }
-
   .app-icon img {
     width: 64px;
     height: 64px;
   }
-
   .app-icon p {
     margin-top: 8px;
     text-align: center;

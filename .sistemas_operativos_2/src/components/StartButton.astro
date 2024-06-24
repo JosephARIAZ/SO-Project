@@ -1,29 +1,156 @@
 ---
 // Componente para el botón de inicio
+import AppIcon from './AppIcon.astro';
+import Search from './Search.astro';
 ---
 <button class="start-button">
     <img src="/images/lupa.png" alt="Start" />
+    <div class="contenedor">
+        <div class="circudeco">
+        </div>
+        <div class="circudeco second">
+            <div class="config">
+                <AppIcon  src=https://cdn-icons-png.freepik.com/512/5720/5720427.png url="https://www.example.com" alt="config"  />
+            </div>
+        </div>        
+        <div class="superior uno ">
+            <AppIcon src="https://images.vexels.com/media/users/3/126947/isolated/preview/928af5e6bc95715b755ba89fc5b99a8a-icono-de-calendario-de-30-dias.png" url="https://www.example.com" alt="Calendario" title="Calendario" />
+            <AppIcon class=" " src=https://media.printables.com/media/prints/852559/images/6557322_27c4a7b3-e480-40d4-9b62-10c9f5570d24_7d21314a-1720-45d8-ba5a-77c27f44d9fe/thumbs/inside/1280x960/png/wt1.webp  url="https://warthunder.com/es/"  title="War Thunder" />
+            <AppIcon src=https://static.vecteezy.com/system/resources/thumbnails/029/128/881/small/phone-icon-3d-rendering-png.png url=https://web.whatsapp.com/ alt="WHatap" title="Whatsapp">
+        </div>
+        <div class="superior dos">
+            <AppIcon src="https://cdn.icon-icons.com/icons2/3053/PNG/512/microsoft_visual_studio_code_macos_bigsur_icon_189957.png" url="https://www.example.com" alt="Visual" title="Visual Studio " />
+            <AppIcon src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/2048px-Google_Chrome_icon_%28February_2022%29.svg.png" url="https://www.example.com" alt="Chrome" title="Chrome" />
+            <AppIcon src="https://cdn-icons-png.flaticon.com/512/174/174872.png" url="https://www.example.com" alt="Spotify" title="Spotify" />
+        </div>
+        <div class="superior tres">
+            <AppIcon src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/2503px-Blender_logo_no_text.svg.png" url="https://www.example.com" alt="Blneder" title="Blender" />
+            <AppIcon src="https://cdn.pixabay.com/photo/2015/08/11/12/32/facebook-884378_1280.png" url="https://www.example.com" alt="Facebook" title="Facebook" />
+
+        </div>
+        <div class="superior cuatro">
+            <AppIcon src="https://cdn.icon-icons.com/icons2/1379/PNG/512/folderblue_92960.png" url="https://www.example.com" alt="Explorador" title="Explorador de archivos" />
+
+            
+        </div>
+        <div class="superior cinco">
+            <Search />
+        </div>
+        
+    </div>
+        
 </button>
 
 <style>
     .start-button {
-    background-color: #444;
-    border: none;
-    padding: 10px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+        right: 3%;
+        bottom: 3%;
+        position: absolute;
+        background-color: #444;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        transition: all 0.3s ease;
+        
+    }
+    .start-button:hover {
+        background-color: #890c0c56;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        bottom: -550px;
+        right: -550px;
+        width: 1100px;
+        height: 1100px;
+        transition: all 0.3s ease;
     }
 
-.start-button:hover {
-    background-color: #d71616;}
 
+
+    .start-button:hover .config{
+        opacity: 1;
+        position:absolute;
+        top: 17%;
+        left: 21%;
+    }
+
+
+
+    .start-button:hover img {
+        opacity: 0;
+    }
     .start-button img {
-    width: 24px;
-    height: 24px;
+        width: 24px;
+        height: 24px;
+        transition: opacity 0.3s ease;
     }
+
+
+
+
+    .circudeco{
+        opacity: 0;
+    }
+    .start-button:hover .circudeco{
+        opacity: 1;
+        left: 50%;
+        top: 60%;
+        position: absolute;
+        background-color: #890c0c56;
+        border: none;
+        border-radius: 50%;
+        width: 550px;
+        height: 550px;
+        transition: all 0.3s ease
+    }
+    .start-button:hover .second{
+        background-color: #cf101056;
+        width: 450px;
+        height: 450px;
+        left: 60%;
+        top: 70%;
+        transition: all 0.3s ease;
+    }
+
+
+
+
+    .start-button:hover .contenedor{
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 50%;
+        height: 50%;
+    }
+
+
+
+    .start-button:hover .superior{
+        position: absolute;
+        display: flex;
+        width: 600px;
+        height: 64px;
+    }
+    .start-button:hover .uno{
+        left: 200px;
+        top: 90px;
+    }
+    .start-button:hover .dos{
+        left: 130px;
+        top: 190px;
+    }
+    .start-button:hover .tres{
+        left: 50px;
+        top: 290px;
+    }
+    .start-button:hover .cuatro{
+        left: 10px;
+        top: 390px;
+    }
+    .start-button:hover .cinco{
+        left: 15px;
+        top: 510px;
+    }
+
+
 </style>
